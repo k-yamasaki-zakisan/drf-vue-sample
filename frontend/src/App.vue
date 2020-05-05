@@ -1,16 +1,22 @@
 <template>
   <div id="app">
+    <GlobalHeader/>
+    <GlobalMessage/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import GlobalHeader from '@/components/GlobalHeader.vue'
+import GlobalMessage from '@/components/GlobalMessage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  // HelloWorld,
+    GlobalHeader,
+    GlobalMessage
   }
 }
 </script>

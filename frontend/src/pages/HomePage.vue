@@ -1,7 +1,5 @@
 <template>
   <div id="home-page">
-    <GlobalHeader/>
-    <GlobalMessage/>
 
     <!-- メインエリア -->
     <main class="container">
@@ -31,13 +29,8 @@
 
 <script>
   import api from '@/services/api'
-  import GlobalHeader from '@/components/GlobalHeader.vue'
-  import GlobalMessage from '@/components/GlobalMessage.vue'
+
   export default {
-    components: {
-      GlobalHeader,
-      GlobalMessage
-    },
     data () {
       return {
         form: {

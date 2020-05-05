@@ -1,7 +1,5 @@
 <template>
   <div id="login-page">
-    <GlobalHeader/>
-    <GlobalMessage/>
 
     <!-- メインエリア -->
     <main class="container">
@@ -30,13 +28,7 @@
 </template>
 
 <script>
-  import GlobalHeader from '@/components/GlobalHeader.vue'
-  import GlobalMessage from '@/components/GlobalMessage.vue'
   export default {
-    components: {
-      GlobalHeader,
-      GlobalMessage
-    },
     data () {
       return {
         form: {

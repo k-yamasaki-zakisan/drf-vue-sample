@@ -3,6 +3,7 @@ cffi==1.14.0
 cryptography==2.9.2
 Django==2.2.5
 django-cors-headers @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/django_cors_headers-3.2.0-py3-none-any.whl
+django-lint==2.0.4
 djangorestframework==3.10.3
 djangorestframework-jwt @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/djangorestframework_jwt-1.11.0-py2.py3-none-any.whl
 djangorestframework-simplejwt==4.3.0
@@ -14,6 +15,7 @@ mccabe==0.6.1
 pycparser==2.20
 PyJWT @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/PyJWT-1.7.1-py2.py3-none-any.whl
 pylint==2.5.0
+pylint-django @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/pylint_django-2.0.11-py3-none-any.whl
 pytz @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/pytz-2019.3-py2.py3-none-any.whl
 six==1.14.0
 sqlparse @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/sqlparse-0.3.0-py2.py3-none-any.whl

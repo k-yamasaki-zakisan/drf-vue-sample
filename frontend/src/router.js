@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomePage from '@/pages/HomePage'
 import LoginPage from '@/pages/LoginPage'
 import store from '@/store'
+import BookList from "@/views/BookList"
 
 Vue.use(VueRouter)
 
@@ -12,7 +13,8 @@ const router = new VueRouter({
     routes: [
         {path:'/', component: HomePage, meta:{requiresAuth: true}},
         {path: '/login', component: LoginPage},
-        {path: '*', redirect:'/'}
+        {path: '*', redirect:'/'},
+        {path: '/booklist', component: BookList},
     ]
 })  
 
