@@ -9,5 +9,5 @@ class BookViewSet(viewsets.ModelViewSet):
 
     queryset = Book.objects.all().order_by("-created_at")
     serializer_class = BookSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly] 
+    # permission_classes = [IsAuthenticatedOrReadOnly] 
 

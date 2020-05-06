@@ -12,6 +12,7 @@
           <td>{{ book.title }}</td>
           <td>{{ book.price }}</td>
           <td><button v-on:click="detail_open(book.id)">詳細</button></td>
+          <td><button v-on:click="delete_book(book.id)">削除</button></td>
         </tr>
       </tbody>
     </table>
@@ -22,6 +23,7 @@
 
 <script>
 import axios from 'axios';
+// import api from '@/services/api'
 
 export default {
   data() {
@@ -38,6 +40,19 @@ export default {
     detail_open (id) {
       console.log(id);
       document.location.href = "/booklist/detail?id="+id;
+    },
+    delete_book (id) {
+      axios
+        .delete("http://127.0.0.1:8000/api/v1/books/"+id,)
+        .then(response => {
+          const message = '削除しました'
+          this.$store.dispatch('message/setInfoMessage', { message: message })
+          response.data
+        })
+        .finally(function() {
+          setTimeout(1000);
+          document.location.href = "/booklist/";
+        })
     },
   },
   mounted () {
