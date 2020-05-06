@@ -3,7 +3,7 @@ from rest_framework import routers
 
 from. import views
 
-from apiv1 import views as qv
+# from apiv1 import views as qv
 
 router = routers.DefaultRouter()
 router.register('books', views.BookViewSet)
@@ -14,3 +14,5 @@ urlpatterns = [
     path('', include(router.urls)),
     
 ] 
+
+

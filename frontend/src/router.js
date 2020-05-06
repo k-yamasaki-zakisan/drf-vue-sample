@@ -4,6 +4,7 @@ import HomePage from '@/pages/HomePage'
 import LoginPage from '@/pages/LoginPage'
 import store from '@/store'
 import BookList from "@/views/BookList"
+import BookDetail from "@/views/BookDetail"
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,7 @@ const router = new VueRouter({
         {path: '/login', component: LoginPage},
         {path: '*', redirect:'/'},
         {path: '/booklist', component: BookList},
+        {path: '/booklist/detail', component: BookDetail},
     ]
 })  
 

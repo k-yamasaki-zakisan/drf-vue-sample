@@ -8,14 +8,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="book in books" :key="book.id">
-          <td>{{ book.title }}</td>
-          <td>{{ book.price }}</td>
-          <td><button v-on:click="detail_open(book.id)">詳細</button></td>
+        <tr>
+          <td>{{ books.title }}</td>
+          <td>{{ books.price }}</td>
         </tr>
       </tbody>
     </table>
-    <!-- <b-table striped hover :items="books" id="id" :fields="fields" @row-clicked="detail_open(id)"></b-table> -->
   </b-container>
 </template>
 
@@ -23,26 +21,22 @@
 <script>
 import axios from 'axios';
 
+const params = (new URL(document.location)).searchParams;
+const id = params.get('id');
+
 export default {
   data() {
     return {
-      fields: ['title', 'price'],
       books: [{
-        id: '',
+        ID: '',
         title: '', 
         price: 0,
       }],
     }
   },
-  methods: {
-    detail_open (id) {
-      console.log(id);
-      document.location.href = "/booklist/detail?id="+id;
-    },
-  },
   mounted () {
     axios
-      .get('http://127.0.0.1:8000/api/v1/books/')
+      .get("http://127.0.0.1:8000/api/v1/books/"+id)
       .then(response => {
         this.books = response.data
         console.log(this.books)

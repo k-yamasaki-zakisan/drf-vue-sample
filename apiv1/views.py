@@ -7,7 +7,7 @@ from .serializers import BookSerializer
 class BookViewSet(viewsets.ModelViewSet):  
     """本モデルの CRUD⽤ API クラス"""
 
-    queryset = Book.objects.all()
+    queryset = Book.objects.all().order_by("-created_at")
     serializer_class = BookSerializer
     permission_classes = [IsAuthenticatedOrReadOnly] 
 
