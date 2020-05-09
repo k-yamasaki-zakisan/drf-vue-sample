@@ -15,8 +15,8 @@ const router = new VueRouter({
         {path:'/', component: HomePage, meta:{requiresAuth: true}},
         {path: '/login', component: LoginPage},
         {path: '*', redirect:'/'},
-        {path: '/booklist', component: BookList},
-        {path: '/booklist/detail', component: BookDetail},
+        {path: '/booklist', component: BookList, meta:{requiresAuth: true}},
+        {path: '/booklist/detail', component: BookDetail, meta:{requiresAuth: true}},
     ]
 })  
 

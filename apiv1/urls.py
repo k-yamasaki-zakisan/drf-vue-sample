@@ -12,7 +12,6 @@ app_name = 'apiv1'
 
 urlpatterns = [
     path('', include(router.urls)),
-    
 ] 
 
 
