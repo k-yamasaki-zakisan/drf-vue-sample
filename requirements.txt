@@ -1,7 +1,7 @@
 astroid==2.4.0
 cffi==1.14.0
 cryptography==2.9.2
-Django==2.2.5
+Django==2.2.13
 django-cors-headers @ file:///Users/kazu/Desktop/DRF/drf-vue-sample/standardpip/django_cors_headers-3.2.0-py3-none-any.whl
 django-lint==2.0.4
 djangorestframework==3.10.3
